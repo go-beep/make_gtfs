@@ -39,6 +39,7 @@ class ProtoFeed(object):
         if freq is not None:
             cols = freq.columns
 
+
             # Fill missing route types with 3 (bus)
             freq["route_type"].fillna(3, inplace=True)
             freq["route_type"] = freq["route_type"].astype(int)
